@@ -10,24 +10,13 @@ const CurrencyCHG = () => {
     })
    }
     return (
-        <div>
-            <div className='row'>
-            <div className="input-group mb-3" style={{ marginLeft: '2rem' }}>
-                    <div className="input-group-prepend">
-                <label className="input-group-text" htmlFor="inputGroupSelect01">Currency</label>
-                  </div>
-                  <select className="custom-select" id="inputGroupSelect01" onChange={(event) => setCurrencey(event.target.value)}>
-                       <option value='$' >$ Dollar</option>
-
-                        <option value='£'  >£ Pound</option>
-                        <option value='€'  >€ Euro</option>
-                        <option value='₹'  >₹ Ruppee</option>
-
-                       
+        <div  className='alert alert-secondary'>
+                  <select className="input-group-text" Style={{color:"green"}} id="inputGroupSelect01" onChange={(event) => setCurrencey(event.target.value)}>
+                       <option value='$' selected={currency==='$'}  data-prefix='+44' >$ Dollar</option>
+                        <option value='£' selected={currency==='£'}  >£ Pound</option>
+                        <option value='€'  selected={currency==='€'} >€ Euro</option>
+                        <option value='₹'  selected={currency==='₹'} >₹ Ruppee</option>
                   </select>
-                 
-                </div>
-                </div>
         </div>
     );
 };
